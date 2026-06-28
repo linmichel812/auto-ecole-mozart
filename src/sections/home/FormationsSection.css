@@ -1,0 +1,52 @@
+.formations-section__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--moz-space-6);
+}
+
+.formations-section__card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  flex: 0 1 100%;
+}
+
+/* Cartes de même hauteur (uniformes) */
+.formations-section__card-link .moz-card {
+  height: 100%;
+}
+
+/* Bordures plus marquées sur toutes les offres */
+.formations-section__card-link .moz-card--default,
+.formations-section__card-link .moz-card--elevated,
+.formations-section__card-link .moz-card--outlined {
+  border: 2px solid var(--moz-border);
+}
+
+.formations-section__card-link .moz-card--featured {
+  border: 2px solid var(--moz-primary-300);
+}
+
+.formations-section__cta {
+  text-align: center;
+  margin-top: var(--moz-space-10);
+}
+
+@media (min-width: 768px) {
+  .formations-section__card-link {
+    flex-basis: calc((100% - var(--moz-space-6)) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .formations-section__card-link {
+    flex-basis: calc((100% - 2 * var(--moz-space-6)) / 3);
+  }
+}
+
+@media (min-width: 1280px) {
+  .formations-section__grid--7 .formations-section__card-link {
+    flex-basis: calc((100% - 3 * var(--moz-space-6)) / 4);
+  }
+}

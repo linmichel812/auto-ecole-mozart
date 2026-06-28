@@ -1,0 +1,261 @@
+/** Styles module paiements : partagés élève / inscription */
+.pay-field {
+  margin-bottom: 1rem;
+}
+
+.pay-field-row {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .pay-field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pay-field__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--moz-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.pay-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pay-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem;
+  border: 2px solid var(--moz-neutral-200);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.pay-method:hover {
+  border-color: var(--moz-primary);
+}
+
+.pay-method--active {
+  border-color: var(--moz-primary);
+  background: rgba(230, 33, 0, 0.04);
+}
+
+.pay-method__icon {
+  font-size: 1.5rem;
+}
+
+.pay-method__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--moz-secondary);
+}
+
+.pay-plan-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .pay-plan-tabs {
+    flex-direction: row;
+  }
+}
+
+.pay-plan-tab {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--moz-neutral-200);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pay-plan-tab span {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--moz-secondary);
+}
+
+.pay-plan-tab small {
+  font-size: 0.72rem;
+  color: var(--moz-neutral-500);
+}
+
+.pay-plan-tab--active {
+  border-color: var(--moz-primary);
+  background: rgba(230, 33, 0, 0.04);
+}
+
+.pay-amount-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--moz-neutral-50);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.pay-amount-display strong {
+  font-size: 1.25rem;
+  color: var(--moz-primary);
+}
+
+.pay-error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.pay-sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.pay-sim-card {
+  padding: 1rem;
+  background: var(--moz-neutral-50);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pay-sim-card--accent {
+  background: rgba(230, 33, 0, 0.06);
+  border: 1px solid rgba(230, 33, 0, 0.2);
+}
+
+.pay-sim-card__label {
+  font-size: 0.75rem;
+  color: var(--moz-neutral-500);
+}
+
+.pay-sim-card strong {
+  font-size: 1rem;
+  color: var(--moz-secondary);
+}
+
+.pay-sim-card small {
+  font-size: 0.72rem;
+  color: var(--moz-neutral-500);
+}
+
+.pay-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--moz-secondary);
+  margin: 1rem 0 0.5rem;
+}
+
+.pay-install-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.pay-install-option {
+  padding: 0.75rem;
+  border: 1px solid var(--moz-neutral-200);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.pay-install-option strong {
+  display: block;
+  color: var(--moz-primary);
+  margin: 0.25rem 0;
+}
+
+.pay-calc-summary {
+  padding: 1rem;
+  background: var(--moz-neutral-50);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.pay-calc-total {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+  color: var(--moz-secondary);
+}
+
+.pay-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pay-schedule-table th,
+.pay-schedule-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--moz-neutral-200);
+}
+
+.pay-schedule-table th {
+  font-weight: 600;
+  color: var(--moz-neutral-500);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.pay-schedule-table__deposit {
+  background: rgba(230, 33, 0, 0.04);
+  font-weight: 600;
+}
+
+.pay-tabs {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--moz-neutral-200);
+  padding-bottom: 0;
+}
+
+.pay-tab {
+  padding: 0.65rem 1rem;
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--moz-neutral-500);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.pay-tab--active {
+  color: var(--moz-primary);
+  border-bottom-color: var(--moz-primary);
+}
+
+.pay-tx-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}

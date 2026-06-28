@@ -1,0 +1,280 @@
+.home-hero {
+  position: relative;
+  min-height: clamp(560px, 92vh, 860px);
+  display: flex;
+  align-items: center;
+  background: var(--moz-bg-hero);
+  overflow: hidden;
+}
+
+.home-hero__bg {
+  position: absolute;
+  inset: -12% 0;
+  background:
+    linear-gradient(135deg, rgb(10 22 40 / 0.94) 0%, rgb(2 30 64 / 0.88) 45%, rgb(230 33 0 / 0.12) 100%),
+    var(--moz-hero-image, none);
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, var(--parallax-y, 0), 0);
+  will-change: transform;
+}
+
+.home-hero__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.home-hero__glow {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(230 33 0 / 0.18) 0%, transparent 70%);
+  top: -15%;
+  right: -10%;
+  pointer-events: none;
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--moz-space-16);
+}
+
+.home-hero__grid {
+  display: grid;
+  gap: var(--moz-space-10);
+  align-items: center;
+}
+
+.home-hero__overline {
+  display: inline-block;
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-sm);
+  font-weight: var(--moz-font-semibold);
+  letter-spacing: var(--moz-tracking-wider);
+  text-transform: uppercase;
+  color: var(--moz-primary-300);
+  margin-bottom: var(--moz-space-4);
+}
+
+.home-hero__title {
+  font-family: var(--moz-font-heading);
+  font-weight: var(--moz-font-extrabold);
+  font-size: clamp(2.125rem, 6vw, 3.75rem);
+  line-height: var(--moz-leading-tight);
+  color: var(--moz-neutral-0);
+  margin-bottom: var(--moz-space-5);
+  letter-spacing: var(--moz-tracking-tight);
+}
+
+.home-hero__title em {
+  font-style: normal;
+  color: var(--moz-primary-300);
+}
+
+.home-hero__subtitle {
+  font-size: clamp(var(--moz-text-base), 2.5vw, var(--moz-text-xl));
+  line-height: var(--moz-leading-relaxed);
+  color: rgb(255 255 255 / 0.82);
+  margin-bottom: var(--moz-space-8);
+  max-width: 34rem;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--moz-space-4);
+  margin-bottom: var(--moz-space-10);
+}
+
+.home-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--moz-space-6);
+  padding-top: var(--moz-space-6);
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.home-hero__trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--moz-space-2);
+  font-size: var(--moz-text-sm);
+  color: rgb(255 255 255 / 0.7);
+}
+
+.home-hero__trust-item svg {
+  color: var(--moz-accent);
+  flex-shrink: 0;
+}
+
+.home-hero__collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: clamp(0.4rem, 0.9vw, 0.7rem);
+  max-width: 600px;
+  margin-inline: auto;
+  perspective: 1400px;
+}
+
+.home-hero__photo {
+  position: relative;
+  border-radius: var(--moz-radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 5.6;
+  box-shadow: var(--moz-shadow-2xl);
+  border: 3px solid rgb(255 255 255 / 0.16);
+  transform: rotate(var(--tilt, 0deg)) translateY(var(--shift, 0));
+  transform-origin: center;
+  /* Animation d'entrée : part droit (rotate 0) puis bascule en diagonale */
+  animation: hero-tilt-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0s) backwards;
+  transition:
+    transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+  will-change: transform;
+}
+
+/* Diagonales alternées + décalage vertical pour un effet collage dynamique */
+.home-hero__photo:nth-child(1) {
+  --tilt: -5deg;
+  --shift: -0.3rem;
+  --delay: 0.15s;
+}
+
+.home-hero__photo:nth-child(2) {
+  --tilt: 4deg;
+  --shift: 0.6rem;
+  --delay: 0.3s;
+}
+
+.home-hero__photo:nth-child(3) {
+  --tilt: 4deg;
+  --shift: -0.6rem;
+  --delay: 0.45s;
+}
+
+.home-hero__photo:nth-child(4) {
+  --tilt: -5deg;
+  --shift: 0.3rem;
+  --delay: 0.6s;
+}
+
+/* Au survol : le cadre se redresse et passe au premier plan */
+.home-hero__photo:hover,
+.home-hero__photo:focus-within {
+  transform: rotate(0deg) translateY(var(--shift, 0)) scale(1.07);
+  z-index: 3;
+  box-shadow: 0 32px 64px -12px rgb(0 0 0 / 0.5);
+  border-color: rgb(230 33 0 / 0.55);
+}
+
+.home-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Effet ken burns continu pour donner vie aux photos */
+  animation: hero-kenburns 14s ease-in-out var(--delay, 0s) infinite alternate;
+}
+
+@keyframes hero-tilt-in {
+  0% {
+    transform: rotate(0deg) translateY(48px) scale(0.88);
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--tilt, 0deg)) translateY(var(--shift, 0)) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+
+.home-hero__photo-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--moz-space-3) var(--moz-space-4);
+  background: linear-gradient(transparent, rgb(2 30 64 / 0.85));
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-xs);
+  font-weight: var(--moz-font-semibold);
+  letter-spacing: var(--moz-tracking-wide);
+  text-transform: uppercase;
+  color: var(--moz-neutral-0);
+}
+
+@media (min-width: 1024px) {
+  .home-hero__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--moz-space-12);
+  }
+
+  .home-hero__collage {
+    margin-inline: 0;
+    margin-left: auto;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-hero__actions {
+    flex-direction: column;
+  }
+
+  .home-hero__actions .moz-btn {
+    width: 100%;
+  }
+
+  .home-hero__collage {
+    max-width: 100%;
+    gap: 0.45rem;
+  }
+
+  /* Angles plus doux et décalages réduits sur mobile */
+  .home-hero__photo:nth-child(1) { --tilt: -4deg; --shift: -0.25rem; }
+  .home-hero__photo:nth-child(2) { --tilt: 3.5deg; --shift: 0.75rem; }
+  .home-hero__photo:nth-child(3) { --tilt: 3.5deg; --shift: -0.75rem; }
+  .home-hero__photo:nth-child(4) { --tilt: -4deg; --shift: 0.25rem; }
+
+  .home-hero__inner {
+    padding-block: var(--moz-space-12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__photo,
+  .home-hero__photo img {
+    animation: none;
+  }
+
+  .home-hero__photo {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-hero {
+    min-height: auto;
+  }
+}

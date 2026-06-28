@@ -1,0 +1,31 @@
+.faq-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--moz-space-2);
+  margin-bottom: var(--moz-space-8);
+}
+
+.faq-page__filter {
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-sm);
+  font-weight: var(--moz-font-medium);
+  padding: var(--moz-space-2) var(--moz-space-4);
+  border: 1.5px solid var(--moz-border);
+  border-radius: var(--moz-radius-full);
+  background: var(--moz-bg);
+  color: var(--moz-text-muted);
+  cursor: pointer;
+  transition: all var(--moz-transition-fast);
+}
+
+.faq-page__filter:hover {
+  border-color: var(--moz-primary-200);
+  color: var(--moz-primary);
+}
+
+.faq-page__filter--active {
+  border-color: var(--moz-primary);
+  background: var(--moz-primary-subtle);
+  color: var(--moz-primary);
+  font-weight: var(--moz-font-semibold);
+}

@@ -1,0 +1,98 @@
+.moz-faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--moz-space-3);
+  max-width: 48rem;
+}
+
+.moz-faq__item {
+  border: 1px solid var(--moz-border);
+  border-radius: var(--moz-radius-lg);
+  background: var(--moz-bg);
+  overflow: hidden;
+  transition: box-shadow var(--moz-transition-fast);
+}
+
+.moz-faq__item--open {
+  box-shadow: var(--moz-shadow-md);
+  border-color: var(--moz-primary-200);
+}
+
+.moz-faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--moz-space-4);
+  padding: var(--moz-space-5) var(--moz-space-6);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-base);
+  font-weight: var(--moz-font-semibold);
+  color: var(--moz-text-heading);
+  transition: color var(--moz-transition-fast);
+}
+
+.moz-faq__trigger:hover {
+  color: var(--moz-primary);
+}
+
+.moz-faq__icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--moz-radius-full);
+  background: var(--moz-primary-subtle);
+  color: var(--moz-primary);
+  transition: transform var(--moz-transition-base);
+}
+
+.moz-faq__item--open .moz-faq__icon {
+  transform: rotate(180deg);
+  background: var(--moz-primary);
+  color: var(--moz-neutral-0);
+}
+
+.moz-faq__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--moz-transition-base);
+}
+
+.moz-faq__item--open .moz-faq__panel {
+  grid-template-rows: 1fr;
+}
+
+.moz-faq__content {
+  overflow: hidden;
+}
+
+.moz-faq__answer {
+  padding: 0 var(--moz-space-6) var(--moz-space-5);
+  font-size: var(--moz-text-base);
+  color: var(--moz-text-muted);
+  line-height: var(--moz-leading-relaxed);
+}
+
+.moz-faq__search {
+  margin-bottom: var(--moz-space-6);
+  max-width: 32rem;
+}
+
+@media (max-width: 767px) {
+  .moz-faq__trigger {
+    padding: var(--moz-space-4) var(--moz-space-5);
+    font-size: var(--moz-text-sm);
+  }
+
+  .moz-faq__answer {
+    padding: 0 var(--moz-space-5) var(--moz-space-4);
+    font-size: var(--moz-text-sm);
+  }
+}

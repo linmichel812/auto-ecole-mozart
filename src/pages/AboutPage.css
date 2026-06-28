@@ -1,0 +1,191 @@
+.about-history__image {
+  border-radius: var(--moz-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--moz-shadow-lg);
+  margin: 0;
+}
+
+.about-history__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.about-mvv__grid {
+  display: grid;
+  gap: var(--moz-space-6);
+  margin-bottom: var(--moz-space-12);
+}
+
+.about-mvv__card {
+  background: var(--moz-bg);
+  border: 1px solid var(--moz-border);
+  border-radius: var(--moz-radius-xl);
+  padding: var(--moz-space-8);
+  box-shadow: var(--moz-shadow-card);
+}
+
+.about-mvv__card h3 {
+  margin: var(--moz-space-3) 0 var(--moz-space-4);
+}
+
+.about-mvv__card p {
+  color: var(--moz-text-muted);
+  line-height: var(--moz-leading-relaxed);
+  margin: 0;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--moz-space-4);
+  padding: var(--moz-space-8);
+  background: var(--moz-secondary-500);
+  border-radius: var(--moz-radius-xl);
+  color: var(--moz-neutral-0);
+}
+
+.about-stats__item {
+  text-align: center;
+  padding: var(--moz-space-4);
+}
+
+.about-stats__item strong {
+  display: block;
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-3xl);
+  font-weight: var(--moz-font-extrabold);
+  color: var(--moz-primary-300);
+  margin-bottom: var(--moz-space-1);
+}
+
+.about-stats__item span {
+  font-size: var(--moz-text-sm);
+  color: rgb(255 255 255 / 0.7);
+}
+
+.about-values__grid {
+  display: grid;
+  gap: var(--moz-space-6);
+}
+
+.about-values__card {
+  padding: var(--moz-space-6);
+  border-left: 4px solid var(--moz-primary);
+  background: var(--moz-bg-subtle);
+  border-radius: 0 var(--moz-radius-lg) var(--moz-radius-lg) 0;
+}
+
+.about-values__card h3 {
+  margin-bottom: var(--moz-space-2);
+  font-size: var(--moz-text-lg);
+}
+
+.about-values__card p {
+  color: var(--moz-text-muted);
+  margin: 0;
+  font-size: var(--moz-text-sm);
+  line-height: var(--moz-leading-relaxed);
+}
+
+.about-team__grid {
+  display: grid;
+  gap: var(--moz-space-8);
+}
+
+.about-team__card {
+  display: grid;
+  gap: var(--moz-space-6);
+  background: var(--moz-bg);
+  border: 1px solid var(--moz-border);
+  border-radius: var(--moz-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--moz-shadow-card);
+}
+
+.about-team__photo {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--moz-bg-muted);
+}
+
+.about-team__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-team__body {
+  padding: 0 var(--moz-space-6) var(--moz-space-6);
+}
+
+.about-team__body h3 {
+  margin-bottom: var(--moz-space-2);
+}
+
+.about-team__specialty {
+  font-size: var(--moz-text-sm);
+  font-weight: var(--moz-font-medium);
+  color: var(--moz-text-heading);
+  margin: var(--moz-space-3) 0 var(--moz-space-1);
+}
+
+.about-team__exp {
+  font-size: var(--moz-text-xs);
+  color: var(--moz-primary);
+  font-weight: var(--moz-font-semibold);
+  margin-bottom: var(--moz-space-3);
+}
+
+.about-team__bio {
+  font-size: var(--moz-text-sm);
+  color: var(--moz-text-muted);
+  line-height: var(--moz-leading-relaxed);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .about-mvv__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team__card {
+    grid-template-columns: 140px 1fr;
+  }
+
+  .about-team__photo {
+    aspect-ratio: auto;
+  }
+
+  .about-team__body {
+    padding: var(--moz-space-6) var(--moz-space-6) var(--moz-space-6) 0;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-team__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-team__card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team__body {
+    padding: 0 var(--moz-space-6) var(--moz-space-6);
+  }
+}

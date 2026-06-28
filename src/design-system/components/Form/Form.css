@@ -1,0 +1,143 @@
+.moz-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--moz-space-2);
+}
+
+.moz-field__label {
+  font-size: var(--moz-text-sm);
+  font-weight: var(--moz-font-medium);
+  color: var(--moz-text-heading);
+}
+
+.moz-field__label-required::after {
+  content: ' *';
+  color: var(--moz-error);
+}
+
+.moz-field__hint {
+  font-size: var(--moz-text-sm);
+  color: var(--moz-text-subtle);
+  margin-top: calc(var(--moz-space-1) * -1);
+}
+
+.moz-field__error {
+  font-size: var(--moz-text-sm);
+  color: var(--moz-error);
+  display: flex;
+  align-items: center;
+  gap: var(--moz-space-1);
+}
+
+.moz-input,
+.moz-textarea,
+.moz-select {
+  width: 100%;
+  font-family: var(--moz-font-body);
+  font-size: var(--moz-text-base);
+  color: var(--moz-text);
+  background: var(--moz-bg);
+  border: 1.5px solid var(--moz-border-strong);
+  border-radius: var(--moz-radius-md);
+  transition:
+    border-color var(--moz-transition-fast),
+    box-shadow var(--moz-transition-fast);
+}
+
+.moz-input,
+.moz-select {
+  min-height: 3rem;
+  padding: var(--moz-space-3) var(--moz-space-4);
+}
+
+.moz-textarea {
+  min-height: 8rem;
+  padding: var(--moz-space-4);
+  resize: vertical;
+  line-height: var(--moz-leading-relaxed);
+}
+
+.moz-input::placeholder,
+.moz-textarea::placeholder {
+  color: var(--moz-neutral-400);
+}
+
+.moz-input:hover,
+.moz-textarea:hover,
+.moz-select:hover {
+  border-color: var(--moz-neutral-400);
+}
+
+.moz-input:focus,
+.moz-textarea:focus,
+.moz-select:focus {
+  outline: none;
+  border-color: var(--moz-border-focus);
+  box-shadow: 0 0 0 3px rgb(230 33 0 / 0.12);
+}
+
+.moz-input--error,
+.moz-textarea--error,
+.moz-select--error {
+  border-color: var(--moz-error);
+}
+
+.moz-input--error:focus,
+.moz-textarea--error:focus,
+.moz-select--error:focus {
+  box-shadow: 0 0 0 3px rgb(220 53 69 / 0.12);
+}
+
+.moz-input--success {
+  border-color: var(--moz-success);
+}
+
+.moz-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23696868' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--moz-space-4) center;
+  padding-right: var(--moz-space-10);
+  cursor: pointer;
+}
+
+.moz-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--moz-space-3);
+  cursor: pointer;
+}
+
+.moz-checkbox__input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.125rem;
+  accent-color: var(--moz-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.moz-checkbox__label {
+  font-size: var(--moz-text-sm);
+  color: var(--moz-text);
+  line-height: var(--moz-leading-normal);
+}
+
+.moz-form-grid {
+  display: grid;
+  gap: var(--moz-space-5);
+}
+
+@media (min-width: 768px) {
+  .moz-form-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .moz-input,
+  .moz-select {
+    min-height: 3rem;
+    font-size: 16px;
+  }
+}

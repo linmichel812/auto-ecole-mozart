@@ -1,0 +1,15 @@
+export { SITE, CONTACT, ASSETS, STATS } from './site';
+export { NAV_LINKS, FOOTER_FORMATION_LINKS } from './navigation';
+export { FORMATIONS, PERMIS_DETAILS, PERMIS_COMPARISON_COLUMNS } from './permis';
+export type { PermisDetail } from './permis';
+export { AGENCIES } from './agencies';
+export type { Agency } from './agencies';
+export { TEAM, ABOUT_CONTENT, VALUES } from './about';
+export { FAQ_ITEMS, FAQ_CATEGORIES } from './faq';
+export { ARTICLES } from './articles';
+export type { Article } from './articles';
+export { TESTIMONIALS, WHY_MOZART } from './home';
+export { INSCRIPTION_STEPS, REQUIRED_DOCUMENTS, DEPOSIT_AMOUNTS, PAYMENT_METHODS } from './inscription';
+export { PERMIS_PRICING } from '../shared/constants/pricing';
+export { LEGAL_DOCUMENTS, LEGAL_LINKS, getLegalDocument } from './legal';
+export { SEO_DEFAULTS, GOOGLE_BUSINESS, SITEMAP_ROUTES, LOCAL_SEO_KEYWORDS } from './seo';

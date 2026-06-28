@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /espace-eleve/
+Disallow: /espace-admin/
+
+# Sitemap
+Sitemap: https://autoecolemozart.cm/sitemap.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 1

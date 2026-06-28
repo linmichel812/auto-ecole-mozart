@@ -1,0 +1,117 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #fff;
+  border-top: 1px solid var(--moz-neutral-200, #e2e8f0);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.12);
+  padding: 1.25rem 0;
+  padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .cookie-banner {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--moz-neutral-200, #e2e8f0);
+  }
+}
+
+.cookie-banner__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .cookie-banner__inner {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.cookie-banner__title {
+  font-family: var(--moz-font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--moz-secondary);
+  margin: 0 0 0.35rem;
+}
+
+.cookie-banner__text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--moz-neutral-600, #475569);
+  margin: 0;
+  max-width: 640px;
+}
+
+.cookie-banner__text a {
+  color: var(--moz-primary);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.cookie-banner__prefs {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cookie-banner__pref {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.cookie-banner__pref--locked {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.cookie-settings-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: inherit;
+}
+
+.gdpr-consent {
+  margin: 1rem 0;
+}
+
+.gdpr-consent__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.gdpr-consent__label a {
+  color: var(--moz-primary);
+}
+
+.gdpr-consent__error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}

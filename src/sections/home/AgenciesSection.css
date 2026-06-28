@@ -1,0 +1,105 @@
+.agencies-section__grid {
+  display: grid;
+  gap: var(--moz-space-5);
+}
+
+.agencies-section__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--moz-space-3);
+  padding: var(--moz-space-6);
+  background: var(--moz-bg);
+  border: 1px solid var(--moz-border);
+  border-radius: var(--moz-radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    box-shadow var(--moz-transition-base),
+    border-color var(--moz-transition-base),
+    transform var(--moz-transition-base);
+}
+
+.agencies-section__card:hover {
+  box-shadow: var(--moz-shadow-card-hover);
+  border-color: var(--moz-primary-200);
+  transform: translateY(-3px);
+}
+
+.agencies-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--moz-space-3);
+}
+
+.agencies-section__name {
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-xl);
+  font-weight: var(--moz-font-semibold);
+  color: var(--moz-text-heading);
+  margin: 0;
+}
+
+.agencies-section__pin {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--moz-radius-full);
+  background: var(--moz-primary-subtle);
+  color: var(--moz-primary);
+  flex-shrink: 0;
+}
+
+.agencies-section__desc {
+  font-size: var(--moz-text-sm);
+  color: var(--moz-text-muted);
+  line-height: var(--moz-leading-relaxed);
+  margin: 0;
+  flex: 1;
+}
+
+.agencies-section__link {
+  font-size: var(--moz-text-sm);
+  font-weight: var(--moz-font-semibold);
+  color: var(--moz-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--moz-space-1);
+}
+
+.agencies-section__map {
+  margin-top: var(--moz-space-10);
+  padding: var(--moz-space-8);
+  background: var(--moz-secondary-500);
+  border-radius: var(--moz-radius-xl);
+  color: var(--moz-neutral-0);
+  text-align: center;
+}
+
+.agencies-section__map-title {
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-xl);
+  font-weight: var(--moz-font-semibold);
+  margin-bottom: var(--moz-space-3);
+}
+
+.agencies-section__map-desc {
+  color: rgb(255 255 255 / 0.75);
+  margin-bottom: var(--moz-space-6);
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .agencies-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .agencies-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

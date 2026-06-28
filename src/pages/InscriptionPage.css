@@ -1,0 +1,287 @@
+.inscription {
+  padding-bottom: var(--moz-space-16);
+}
+
+.inscription-wizard {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.inscription-progress {
+  margin-bottom: var(--moz-space-10);
+}
+
+.inscription-progress__bar {
+  height: 4px;
+  background: var(--moz-border);
+  border-radius: var(--moz-radius-full);
+  overflow: hidden;
+  margin-bottom: var(--moz-space-6);
+}
+
+.inscription-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--moz-primary), var(--moz-primary-400));
+  border-radius: var(--moz-radius-full);
+  transition: width var(--moz-transition-base);
+}
+
+.inscription-progress__steps {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--moz-space-1);
+}
+
+.inscription-progress__step {
+  flex: 1;
+  text-align: center;
+  font-size: var(--moz-text-xs);
+  color: var(--moz-text-subtle);
+  font-weight: var(--moz-font-medium);
+}
+
+.inscription-progress__step--active {
+  color: var(--moz-primary);
+  font-weight: var(--moz-font-semibold);
+}
+
+.inscription-progress__step--done {
+  color: var(--moz-success);
+}
+
+.inscription-panel {
+  background: var(--moz-bg);
+  border: 1px solid var(--moz-border);
+  border-radius: var(--moz-radius-xl);
+  padding: var(--moz-space-8);
+  box-shadow: var(--moz-shadow-card);
+}
+
+.inscription-panel h2 {
+  margin-bottom: var(--moz-space-2);
+  font-size: var(--moz-text-2xl);
+}
+
+.inscription-panel > p {
+  color: var(--moz-text-muted);
+  margin-bottom: var(--moz-space-6);
+}
+
+.inscription-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--moz-space-4);
+  margin-top: var(--moz-space-8);
+  padding-top: var(--moz-space-6);
+  border-top: 1px solid var(--moz-border);
+}
+
+.inscription-permis-grid {
+  display: grid;
+  gap: var(--moz-space-3);
+}
+
+.inscription-permis-option {
+  display: flex;
+  align-items: center;
+  gap: var(--moz-space-4);
+  padding: var(--moz-space-4) var(--moz-space-5);
+  border: 2px solid var(--moz-border);
+  border-radius: var(--moz-radius-lg);
+  cursor: pointer;
+  transition: border-color var(--moz-transition-fast), background var(--moz-transition-fast);
+  text-align: left;
+  background: var(--moz-bg);
+  width: 100%;
+}
+
+.inscription-permis-option:hover {
+  border-color: var(--moz-primary-200);
+  background: var(--moz-primary-subtle);
+}
+
+.inscription-permis-option--selected {
+  border-color: var(--moz-primary);
+  background: var(--moz-primary-subtle);
+}
+
+.inscription-permis-option input {
+  accent-color: var(--moz-primary);
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.inscription-permis-option__info strong {
+  display: block;
+  font-family: var(--moz-font-heading);
+  color: var(--moz-text-heading);
+}
+
+.inscription-permis-option__info span {
+  font-size: var(--moz-text-sm);
+  color: var(--moz-text-muted);
+}
+
+.inscription-agency-grid {
+  display: grid;
+  gap: var(--moz-space-3);
+}
+
+.inscription-upload {
+  display: flex;
+  flex-direction: column;
+  gap: var(--moz-space-4);
+}
+
+.inscription-upload__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--moz-space-4);
+  padding: var(--moz-space-4);
+  border: 1.5px dashed var(--moz-border-strong);
+  border-radius: var(--moz-radius-md);
+  flex-wrap: wrap;
+}
+
+.inscription-upload__item--done {
+  border-color: var(--moz-success);
+  border-style: solid;
+  background: var(--moz-success-subtle);
+}
+
+.inscription-upload__label {
+  font-size: var(--moz-text-sm);
+  font-weight: var(--moz-font-medium);
+}
+
+.inscription-upload__label span {
+  color: var(--moz-error);
+}
+
+.inscription-upload__file {
+  font-size: var(--moz-text-xs);
+  color: var(--moz-success-700);
+}
+
+.inscription-upload input[type='file'] {
+  font-size: var(--moz-text-sm);
+  max-width: 100%;
+}
+
+.inscription-review {
+  display: grid;
+  gap: var(--moz-space-4);
+}
+
+.inscription-review__section {
+  padding: var(--moz-space-4);
+  background: var(--moz-bg-subtle);
+  border-radius: var(--moz-radius-md);
+}
+
+.inscription-review__section h4 {
+  font-size: var(--moz-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--moz-tracking-wide);
+  color: var(--moz-text-subtle);
+  margin-bottom: var(--moz-space-2);
+}
+
+.inscription-review__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--moz-space-4);
+  font-size: var(--moz-text-sm);
+  padding: var(--moz-space-1) 0;
+}
+
+.inscription-review__row strong {
+  color: var(--moz-text-heading);
+  text-align: right;
+}
+
+.inscription-payment {
+  text-align: center;
+  padding: var(--moz-space-6);
+  background: var(--moz-primary-subtle);
+  border-radius: var(--moz-radius-lg);
+  margin-bottom: var(--moz-space-6);
+}
+
+.inscription-payment__amount {
+  font-family: var(--moz-font-heading);
+  font-size: var(--moz-text-4xl);
+  font-weight: var(--moz-font-extrabold);
+  color: var(--moz-primary);
+}
+
+.inscription-payment-methods {
+  display: grid;
+  gap: var(--moz-space-3);
+  margin-bottom: var(--moz-space-6);
+}
+
+.inscription-payment-method {
+  display: flex;
+  align-items: center;
+  gap: var(--moz-space-3);
+  padding: var(--moz-space-4);
+  border: 2px solid var(--moz-border);
+  border-radius: var(--moz-radius-md);
+  cursor: pointer;
+  background: var(--moz-bg);
+  width: 100%;
+  text-align: left;
+  transition: border-color var(--moz-transition-fast);
+}
+
+.inscription-payment-method--selected {
+  border-color: var(--moz-primary);
+  background: var(--moz-primary-subtle);
+}
+
+.inscription-success {
+  text-align: center;
+  padding: var(--moz-space-10);
+}
+
+.inscription-success svg {
+  color: var(--moz-success);
+  margin-bottom: var(--moz-space-4);
+}
+
+.inscription-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--moz-space-4);
+  justify-content: center;
+  margin-top: var(--moz-space-8);
+  font-size: var(--moz-text-sm);
+  color: var(--moz-text-muted);
+}
+
+@media (max-width: 767px) {
+  .inscription-panel {
+    padding: var(--moz-space-5);
+  }
+
+  .inscription-progress__step span {
+    display: none;
+  }
+
+  .inscription-nav {
+    flex-direction: column-reverse;
+  }
+
+  .inscription-nav .moz-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .inscription-progress__step span {
+    display: block;
+  }
+}

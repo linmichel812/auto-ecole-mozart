@@ -1,0 +1,150 @@
+.permis-compare {
+  overflow-x: auto;
+  border-radius: var(--moz-radius-lg);
+  border: 1px solid var(--moz-border);
+  box-shadow: var(--moz-shadow-sm);
+}
+
+.permis-compare__table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: var(--moz-text-sm);
+}
+
+.permis-compare__table thead {
+  background: var(--moz-secondary-500);
+  color: var(--moz-neutral-0);
+}
+
+.permis-compare__table th {
+  font-family: var(--moz-font-heading);
+  font-weight: var(--moz-font-semibold);
+  text-align: left;
+  padding: var(--moz-space-4) var(--moz-space-5);
+  white-space: nowrap;
+}
+
+.permis-compare__table td {
+  padding: var(--moz-space-4) var(--moz-space-5);
+  border-bottom: 1px solid var(--moz-border);
+  vertical-align: top;
+  color: var(--moz-text-muted);
+}
+
+.permis-compare__table tbody tr:hover {
+  background: var(--moz-bg-subtle);
+}
+
+.permis-compare__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.permis-compare__name {
+  font-family: var(--moz-font-heading);
+  font-weight: var(--moz-font-bold);
+  color: var(--moz-text-heading);
+  display: block;
+}
+
+.permis-compare__cat {
+  font-size: var(--moz-text-xs);
+  color: var(--moz-primary);
+  font-weight: var(--moz-font-medium);
+}
+
+.permis-compare__price {
+  font-family: var(--moz-font-heading);
+  font-weight: var(--moz-font-bold);
+  color: var(--moz-primary);
+  white-space: nowrap;
+}
+
+.permis-compare__list {
+  margin: 0;
+  padding-left: var(--moz-space-4);
+  line-height: 1.6;
+}
+
+.permis-compare__list li {
+  margin-bottom: var(--moz-space-1);
+}
+
+.permis-cards {
+  display: none;
+  flex-direction: column;
+  gap: var(--moz-space-6);
+}
+
+.permis-card-detail {
+  background: var(--moz-bg);
+  border: 1px solid var(--moz-border);
+  border-radius: var(--moz-radius-xl);
+  padding: var(--moz-space-6);
+  scroll-margin-top: 6rem;
+}
+
+.permis-card-detail--featured {
+  border-color: var(--moz-primary-200);
+  background: linear-gradient(135deg, var(--moz-neutral-0), var(--moz-primary-50));
+}
+
+.permis-card-detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--moz-space-4);
+  margin-bottom: var(--moz-space-4);
+}
+
+.permis-card-detail__meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--moz-space-4);
+  margin: var(--moz-space-5) 0;
+  padding: var(--moz-space-4);
+  background: var(--moz-bg-subtle);
+  border-radius: var(--moz-radius-md);
+}
+
+.permis-card-detail__meta dt {
+  font-size: var(--moz-text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--moz-tracking-wide);
+  color: var(--moz-text-subtle);
+  margin-bottom: var(--moz-space-1);
+}
+
+.permis-card-detail__meta dd {
+  font-weight: var(--moz-font-semibold);
+  color: var(--moz-text-heading);
+  margin: 0;
+}
+
+.permis-card-detail__section h4 {
+  font-size: var(--moz-text-sm);
+  margin-bottom: var(--moz-space-2);
+}
+
+.permis-card-detail__section ul {
+  margin: 0 0 var(--moz-space-4);
+  padding-left: var(--moz-space-5);
+  color: var(--moz-text-muted);
+  font-size: var(--moz-text-sm);
+}
+
+@media (max-width: 1023px) {
+  .permis-compare {
+    display: none;
+  }
+
+  .permis-cards {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .permis-cards {
+    display: none;
+  }
+}

@@ -1,0 +1,119 @@
+.moz-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--moz-radius-lg);
+  border: 1px solid var(--moz-border);
+  box-shadow: var(--moz-shadow-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+.moz-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--moz-text-sm);
+  background: var(--moz-bg);
+}
+
+.moz-table thead {
+  background: var(--moz-secondary-500);
+  color: var(--moz-text-inverse);
+}
+
+.moz-table th {
+  font-family: var(--moz-font-heading);
+  font-weight: var(--moz-font-semibold);
+  font-size: var(--moz-text-sm);
+  text-align: left;
+  padding: var(--moz-space-4) var(--moz-space-5);
+  white-space: nowrap;
+  letter-spacing: var(--moz-tracking-wide);
+}
+
+.moz-table td {
+  padding: var(--moz-space-4) var(--moz-space-5);
+  border-bottom: 1px solid var(--moz-border);
+  color: var(--moz-text);
+  vertical-align: middle;
+}
+
+.moz-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.moz-table tbody tr:hover {
+  background: var(--moz-bg-subtle);
+}
+
+.moz-table__highlight {
+  font-family: var(--moz-font-heading);
+  font-weight: var(--moz-font-bold);
+  color: var(--moz-primary);
+}
+
+.moz-table__check {
+  color: var(--moz-success);
+  font-weight: var(--moz-font-bold);
+}
+
+.moz-table__dash {
+  color: var(--moz-neutral-400);
+}
+
+/* Mobile : cards empilées */
+@media (max-width: 767px) {
+  .moz-table-wrapper--responsive {
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .moz-table--responsive {
+    display: block;
+  }
+
+  .moz-table--responsive thead {
+    display: none;
+  }
+
+  .moz-table--responsive tbody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--moz-space-4);
+  }
+
+  .moz-table--responsive tr {
+    display: block;
+    border: 1px solid var(--moz-border);
+    border-radius: var(--moz-radius-lg);
+    box-shadow: var(--moz-shadow-sm);
+    overflow: hidden;
+  }
+
+  .moz-table--responsive tr:hover {
+    background: var(--moz-bg);
+  }
+
+  .moz-table--responsive td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--moz-space-3) var(--moz-space-4);
+    border-bottom: 1px solid var(--moz-border);
+    gap: var(--moz-space-4);
+  }
+
+  .moz-table--responsive td:last-child {
+    border-bottom: none;
+  }
+
+  .moz-table--responsive td::before {
+    content: attr(data-label);
+    font-family: var(--moz-font-heading);
+    font-weight: var(--moz-font-semibold);
+    font-size: var(--moz-text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--moz-tracking-wide);
+    color: var(--moz-text-muted);
+    flex-shrink: 0;
+  }
+}
