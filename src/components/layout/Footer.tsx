@@ -6,6 +6,15 @@ import './Footer.css';
 
 const year = new Date().getFullYear();
 
+const FOOTER_LEGAL_LINKS = LEGAL_LINKS.filter((link) => !link.href.endsWith('/politique-cookies'));
+
+function legalLinkClass(href: string): string {
+  if (href.endsWith('/mentions-legales') || href.endsWith('/politique-de-confidentialite')) {
+    return 'moz-footer__legal-item moz-footer__legal-item--mobile-hide';
+  }
+  return 'moz-footer__legal-item';
+}
+
 export function Footer() {
   return (
     <footer className="moz-footer" role="contentinfo">
@@ -44,7 +53,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="moz-footer__col moz-footer__col--formations">
             <h2 className="moz-footer__title">Formations</h2>
             <ul className="moz-footer__links">
               {FOOTER_FORMATION_LINKS.map((f) => (
@@ -55,7 +64,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="moz-footer__col moz-footer__col--navigation">
             <h2 className="moz-footer__title">Navigation</h2>
             <ul className="moz-footer__links">
               {NAV_LINKS.map((link) => (
@@ -69,15 +78,19 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="moz-footer__col moz-footer__col--legal">
             <h2 className="moz-footer__title">Informations légales</h2>
             <ul className="moz-footer__links">
-              {LEGAL_LINKS.map((link) => (
-                <li key={link.href}>
+              {FOOTER_LEGAL_LINKS.map((link) => (
+                <li key={link.href} className={legalLinkClass(link.href)}>
                   <Link to={link.href}>{link.label}</Link>
                 </li>
               ))}
-              <li>
+              <li className="moz-footer__cookies-combo">
+                <Link to="/legal/politique-cookies">Politique cookies</Link>
+                <span className="moz-footer__cookies-sep" aria-hidden="true">
+                  ·
+                </span>
                 <CookieSettingsButton />
               </li>
             </ul>

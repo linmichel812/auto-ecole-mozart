@@ -142,4 +142,25 @@
   .moz-footer {
     padding-top: var(--moz-space-12);
   }
+
+  .moz-footer__col--formations,
+  .moz-footer__col--navigation {
+    display: none;
+  }
+
+  .moz-footer__legal-item--mobile-hide {
+    display: none;
+  }
+}
+
+.moz-footer__cookies-combo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+}
+
+.moz-footer__cookies-sep {
+  color: rgb(255 255 255 / 0.35);
+  user-select: none;
 }
