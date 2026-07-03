@@ -59,9 +59,6 @@ export function Header() {
           </nav>
 
           <div className="moz-header__actions">
-            <Button to="/espace-eleve/connexion" variant="ghost" size="sm">
-              Espace élève
-            </Button>
             <Button href={whatsappUrl} variant="whatsapp" size="sm" icon={<WhatsAppIcon />}>
               WhatsApp
             </Button>
@@ -100,9 +97,6 @@ export function Header() {
             </Link>
           ))}
           <div className="moz-header__mobile-actions">
-            <Button to="/espace-eleve/connexion" variant="outline" fullWidth onClick={() => setMenuOpen(false)}>
-              Espace élève
-            </Button>
             <Button to="/inscription" fullWidth onClick={() => setMenuOpen(false)}>
               S&apos;inscrire
             </Button>

@@ -12,17 +12,17 @@ const COLLAGE = [
   },
   {
     src: ASSETS.collage.instructor,
-    alt: 'Moniteur pédagogue accompagnant un élève conducteur',
+    alt: 'Moniteur devant un véhicule de formation Auto-École Mozart à Yaoundé',
     label: 'Moniteurs',
   },
   {
     src: ASSETS.collage.students,
-    alt: 'Élève en cours de conduite pratique à Yaoundé',
+    alt: 'Accueil et accompagnement des futurs élèves à l\'agence Mozart',
     label: 'Élèves',
   },
   {
     src: ASSETS.collage.training,
-    alt: 'Séance de formation à la conduite en conditions réelles',
+    alt: 'Formation pratique à la conduite avec Auto-École Mozart',
     label: 'Formation',
   },
 ] as const;
@@ -53,9 +53,10 @@ export function HomeHero() {
           <div>
             <span className="home-hero__overline">Votre permis, c&apos;est ici !</span>
             <h1 id="hero-title" className="home-hero__title">
-              Apprenez à rouler,
-              <br />
-              <em>vivez pleinement !</em>
+              <span className="home-hero__title-line">Apprenez à rouler,</span>
+              <span className="home-hero__title-line home-hero__title-line--accent">
+                vivez pleinement{'\u00A0'}!
+              </span>
             </h1>
             <p className="home-hero__subtitle">
               {SITE.name}, {SITE.tagline}. Référence à Yaoundé depuis plus de 15 ans.
@@ -83,21 +84,23 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="home-hero__collage" aria-label="Galerie : véhicules, moniteurs et élèves">
-            {COLLAGE.map((item, index) => (
-              <figure key={item.label} className="home-hero__photo">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  width={360}
-                  height={450}
-                  fetchPriority={index === 0 ? 'high' : 'auto'}
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  decoding={index === 0 ? 'sync' : 'async'}
-                />
-                <figcaption className="home-hero__photo-label">{item.label}</figcaption>
-              </figure>
-            ))}
+          <div className="home-hero__visual">
+            <div className="home-hero__collage" aria-label="Galerie : véhicules, moniteurs et élèves">
+              {COLLAGE.map((item, index) => (
+                <figure key={item.label} className="home-hero__photo">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    width={360}
+                    height={450}
+                    fetchPriority={index === 0 ? 'high' : 'auto'}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    decoding={index === 0 ? 'sync' : 'async'}
+                  />
+                  <figcaption className="home-hero__photo-label">{item.label}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </div>

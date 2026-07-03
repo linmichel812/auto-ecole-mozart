@@ -14,7 +14,6 @@
     background-color var(--moz-transition-fast),
     border-color var(--moz-transition-fast),
     color var(--moz-transition-fast),
-    box-shadow var(--moz-transition-fast),
     transform var(--moz-transition-fast);
   white-space: nowrap;
   user-select: none;
@@ -55,13 +54,13 @@
 .moz-btn--primary {
   background-color: var(--moz-primary);
   color: var(--moz-text-inverse);
-  box-shadow: var(--moz-shadow-primary);
+  box-shadow: none;
 }
 
 .moz-btn--primary:not(:disabled):hover {
   background-color: var(--moz-primary-hover);
   color: var(--moz-text-inverse);
-  box-shadow: 0 10px 28px rgb(230 33 0 / 0.35);
+  box-shadow: none;
 }
 
 /* Secondary */

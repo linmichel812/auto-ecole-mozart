@@ -1,3 +1,7 @@
+import collageInstructor from '../assets/image.png';
+import collageStudents from '../assets/image2.png';
+import collageTraining from '../assets/auto-ecole-mozart2-rbxk76c6fuz9d0ju0jeie029kmhtgxpr5npjf3rfyg.jpg';
+
 export const SITE = {
   name: 'Auto-École Mozart',
   tagline: 'Le génie du volant',
@@ -27,9 +31,9 @@ export const ASSETS = {
   aboutImage: 'https://autoecolemozart.cm/wp-content/uploads/2025/09/auto-ecole-mozart7.jpg',
   collage: {
     vehicles: 'https://autoecolemozart.cm/wp-content/uploads/2025/09/auto-ecole-mozart7.jpg',
-    instructor: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=750&fit=crop&q=80',
-    students: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&h=750&fit=crop&q=80',
-    training: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=750&fit=crop&q=80',
+    instructor: collageInstructor,
+    students: collageStudents,
+    training: collageTraining,
   },
 } as const;
 

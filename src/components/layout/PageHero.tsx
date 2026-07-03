@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Hero } from '../../design-system';
+import { ASSETS } from '../../data';
 
 interface PageHeroProps {
   title: string;
@@ -16,7 +17,7 @@ export function PageHero({ title, subtitle, breadcrumb, actions }: PageHeroProps
       subtitle={subtitle}
       breadcrumb={breadcrumb}
       actions={actions}
-      backgroundImage="https://autoecolemozart.cm/wp-content/uploads/2025/09/auto-ecole-mozart7.jpg"
+      backgroundImage={ASSETS.heroBg}
     />
   );
 }

@@ -1,3 +1,5 @@
+import { ASSETS } from './site';
+
 export const VALUES = [
   {
     id: 'securite',
@@ -54,7 +56,7 @@ export const TEAM = [
     experience: '20 ans d\'expérience',
     bio: 'Fondateur de Mozart en 2010, Jean-Baptiste a bâti une auto-école centrée sur la réussite et la sécurité routière à Yaoundé.',
     initials: 'JN',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80',
+    photo: ASSETS.collage.instructor,
   },
   {
     id: 'monitrice-b',
@@ -64,7 +66,7 @@ export const TEAM = [
     experience: '12 ans d\'expérience',
     bio: 'Reconnue pour sa patience et sa pédagogie, Claire accompagne chaque élève jusqu\'à la confiance au volant.',
     initials: 'CM',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80',
+    photo: ASSETS.collage.instructor,
   },
   {
     id: 'moniteur-b',
@@ -74,7 +76,7 @@ export const TEAM = [
     experience: '10 ans d\'expérience',
     bio: 'Spécialiste de la préparation à l\'examen officiel, Samuel prépare les candidats en conditions réelles.',
     initials: 'SE',
-    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=80',
+    photo: ASSETS.collage.instructor,
   },
   {
     id: 'moniteur-a',
@@ -84,7 +86,7 @@ export const TEAM = [
     experience: '8 ans d\'expérience',
     bio: 'Expert moto, Patrick forme les conducteurs de deux-roues aux réalités de la circulation camerounaise.',
     initials: 'PA',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80',
+    photo: ASSETS.collage.training,
   },
   {
     id: 'moniteur-pro',
@@ -94,7 +96,7 @@ export const TEAM = [
     experience: '15 ans d\'expérience',
     bio: 'Ancien chauffeur routier, Michel transmet son expertise aux futurs professionnels du transport.',
     initials: 'MO',
-    photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&q=80',
+    photo: ASSETS.collage.training,
   },
   {
     id: 'admin',
@@ -104,6 +106,6 @@ export const TEAM = [
     experience: '7 ans d\'expérience',
     bio: 'Aïcha accompagne chaque élève dans ses démarches administratives, de l\'inscription à l\'obtention du permis.',
     initials: 'AF',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80',
+    photo: ASSETS.collage.students,
   },
 ] as const;
